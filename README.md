@@ -6,15 +6,9 @@ Um **First-Person Shooter estacionário** feito em **C++** com **OpenGL** e **Fr
 
 ---
 
-## 📸 Screenshots
+## 📸 Screenshot
 
-| Antes da horda | Zumbis atacando a barricada |
-|:---:|:---:|
-| ![Ambientação inicial](docs/img/figura1.png) | ![Combate](docs/img/figura2.png) |
-
-| Recarregando no acampamento | Game Over |
-|:---:|:---:|
-| ![Recarga](docs/img/figura3.png) | ![Game Over](docs/img/figura4.png) |
+<img width="1181" height="607" alt="print" src="https://github.com/user-attachments/assets/5e0e83b7-8b60-4981-9bb7-02d84cc98ab9" />
 
 ---
 
@@ -24,10 +18,10 @@ O jogador permanece fixo atrás de uma barricada resistente, mas não invencíve
 
 **A mecânica central:**
 
-- Cada zumbi só morre com um **tiro certeiro na cabeça** (headshot).
-- O pente da arma é **limitado**. Quando acaba, é preciso **virar as costas** para a barricada e recarregar junto às caixas de munição, perdendo os inimigos de vista enquanto eles continuam avançando.
+- Cada zumbi só morre com um tiro certeiro na cabeça (headshot).
+- O pente da arma é limitado. Quando acaba, é preciso virar as costas para a barricada e recarregar junto às caixas de munição, perdendo os inimigos de vista enquanto eles continuam avançando.
 - A recarga é gradual e passiva, acontecendo enquanto o jogador olha para o acampamento/caixas de munição.
-- Se a **vida da barricada** chegar a zero, é **Game Over**: o tempo para, os controles são desativados e um grito (`scream.mp3`) é tocado. Qualquer tecla reinicia a partida.
+- Se a "vida" da barricada chegar a zero, é *Game Over*: o tempo para, os controles são desativados e um grito (`scream.mp3`) é tocado. Qualquer tecla reinicia a partida.
 
 **Objetivo:** sobreviver pelo maior tempo possível, administrando munição e tempo.
 
@@ -56,22 +50,22 @@ O tipo é sorteado aleatoriamente a cada novo zumbi gerado:
 
 ### Raycasting e colisão
 - Ao atirar, um raio é lançado da câmera na direção do mouse, usando as funções de projeção do OpenGL.
-- Cada zumbi possui uma **AABB** (Axis-Aligned Bounding Box) envolvendo a cabeça, testada com o algoritmo de interseção **Ray vs AABB (método "Slab")**.
+- Cada zumbi possui uma AABB (Axis-Aligned Bounding Box) envolvendo a cabeça, testada com o algoritmo de interseção Ray vs AABB (método "Slab").
 - Um acerto remove o zumbi e dispara um efeito de explosão de sangue.
-- A hitbox também é checada contra a colisão da barricada para definir se o zumbi está em **modo de ataque**.
+- A hitbox também é checada contra a colisão da barricada para definir se o zumbi está em modo de ataque.
 
 ### Iluminação e atmosfera
 - Iluminação global azul escura para simular a noite.
-- **Spotlight** acima do jogador para melhorar a visibilidade.
-- **Fog** intenso a partir de certa distância, fazendo os zumbis surgirem gradualmente.
-- **Muzzle flash** ao disparar, aumentando o brilho na região do cano da arma.
+- Spotlight acima do jogador para melhorar a visibilidade.
+- Fog intenso a partir de certa distância, fazendo os zumbis surgirem gradualmente.
+- Muzzle flash ao disparar, aumentando o brilho na região do cano da arma.
 
 ### Movimentação e animações
 - Zumbis avançam incrementando a coordenada Z, levando consigo o modelo e a hitbox.
-- A virada de câmera entre barricada e acampamento usa **interpolação e rotação** em torno de um eixo.
-- Animação de **coice** da arma ao disparar e de aproximação das caixas de munição ao recarregar.
+- A virada de câmera entre barricada e acampamento usa interpolação e rotação em torno de um eixo.
+- Animação de coice da arma ao disparar e de aproximação das caixas de munição ao recarregar.
 - Braços e pernas dos zumbis são controlados individualmente (funções de tempo e ângulos) para as animações de caminhada e ataque.
-- **Sistema de partículas** vermelhas para a explosão do crânio.
+- Sistema de partículas vermelhas para a explosão do crânio.
 
 ### Áudio
 - Sons ambiente, disparos e efeitos via MiniAudio, com reprodução simultânea de vários arquivos.
@@ -149,8 +143,8 @@ O projeto permitiu praticar modelagem, texturização, iluminação, animação 
 
 ## 👥 Autores
 
-- **Lucas Vilarinho C. M. Camarço**
-- **João Pedro Saleh de Sousa**
+- Lucas Vilarinho C. M. Camarço
+- João Pedro Saleh de Sousa
 
 Universidade Federal do Piauí — Departamento de Ciência da Computação
 
