@@ -105,17 +105,6 @@ g++ main.cpp -o zombie-barricade-shooter -lGL -lGLU -lglut
 
 ---
 
-## 🕹️ Controles
-
-| Ação | Controle |
-|---|---|
-| Mirar | Mouse |
-| Atirar | Clique do mouse |
-| Virar para o acampamento / recarregar | _(preencher com a tecla)_ |
-| Reiniciar após Game Over | Qualquer tecla |
-
----
-
 ## 📁 Estrutura sugerida
 
 ```
